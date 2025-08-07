@@ -1,50 +1,60 @@
-# Welcome to your Expo app 👋
+Sure! Here's a README tailored for your **Solitaire Game** React Native app, modeled on your ToDo App example:
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+---
 
-## Get started
+# Solitaire Game (Mobile)
 
-1. Install dependencies
+## Description
 
-   ```bash
-   npm install
-   ```
+This is a classic Solitaire card game built with React Native and Expo, designed to bring the fun of Solitaire to your mobile device. The app allows users to:
 
-2. Start the app
+- Play the traditional Solitaire (Klondike) card game with drag-and-drop functionality.
+- View beautiful card graphics and smooth animations.
+- Track game progress with move counts and timers.
+- Undo moves to correct mistakes.
+- Enjoy persistent game state so you can resume where you left off.
 
-   ```bash
-   npx expo start
-   ```
+### Prerequisites
 
-In the output, you'll find options to open the app in a
+- [npm](https://www.npmjs.com)
+- [Expo Go](https://expo.dev)
+- [Homebrew](https://brew.sh)
+- [NativeWind](https://www.nativewind.dev) (if using Tailwind CSS styles)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Installation (Development)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+1. Install Expo Go on your mobile device.
+2. Run `npx expo start` in your terminal.
+3. Open the app in Expo Go, run on web, or run on iOS/Android simulators.
 
-## Get a fresh project
+## Options if not already installed
 
-When you're ready, run:
+- `brew install node`
+- `brew install watchman`
+- `npx expo install @react-native-async-storage/async-storage`
+- `npx expo install expo-splash-screen`
 
-```bash
-npm run reset-project
-```
+## File Structure
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- `app/` contains the main app UI and navigation files.
+- `assets/` contains card images, icons, and other media assets.
+- `components/` contains reusable UI components like cards, buttons, and game controls.
+- `constants/` contains app-wide constants like colors, fonts, and game rules.
 
-## Learn more
+## How to Use
 
-To learn more about developing your project with Expo, look at the following resources:
+Open the app and start a new game of Solitaire. Drag and drop cards to build stacks, organize cards by suit and number, and try to clear the board. Use the undo button if you make a mistake.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Built With
 
-## Join the community
+- JavaScript
+- React Native
+- Expo
 
-Join our community of developers creating universal apps.
+## Acknowledgement
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Thanks to [Prime Digital Academy](https://www.primeacademy.io) for inspiration and support.
+
+## Support
+
+If you have suggestions or issues, please email me at [nicolebarnhouse@gmail.com](mailto:nicolebarnhouse@gmail.com).

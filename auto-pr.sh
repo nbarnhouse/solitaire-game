@@ -33,3 +33,7 @@ echo "🔀 Merging pull request..."
 gh pr merge --auto --squash --delete-branch
 
 echo "🎉 Done! PR approved and merged."
+
+
+# To run this script use: 
+# ./auto-pr.sh
