@@ -1,30 +1,35 @@
 #!/bin/bash
 
-# Stop on first error
+# Exit immediately on error
 set -e
 
-# Customize this
-BRANCH_NAME="auto/update-$(date +%s)"
-COMMIT_MSG="Automated PR: update at $(date)"
+# Default to a unique branch name
+BRANCH_NAME=${1:-"auto/solitaire-update-$(date +%s)"}
+COMMIT_MSG=${2:-"chore: auto update for solitaire game @ $(date)"}
 
-# 1. Create and switch to a new branch
+echo "🔧 Creating branch: $BRANCH_NAME"
 git checkout -b $BRANCH_NAME
 
-# 2. Make your changes here (this example adds a timestamp file)
-echo "Auto update: $(date)" > timestamp.txt
+# 📝 Optional: make a placeholder change if needed
+# Remove or replace this with real logic (e.g., asset updates, build version bumps)
+echo "// Auto update made on $(date)" >> solitaire_update_log.js
 
-# 3. Stage and commit changes
+echo "📦 Staging and committing changes..."
 git add .
 git commit -m "$COMMIT_MSG"
 
-# 4. Push to GitHub
+echo "🚀 Pushing branch to origin..."
 git push -u origin $BRANCH_NAME
 
-# 5. Create PR
-gh pr create --base main --head $BRANCH_NAME --title "$COMMIT_MSG" --body "Automated PR for $BRANCH_NAME"
+echo "📬 Creating pull request..."
+gh pr create --base main --head $BRANCH_NAME \
+  --title "$COMMIT_MSG" \
+  --body "Automated PR created by auto-pr.sh for Solitaire Game"
 
-# 6. Approve PR (optional)
+echo "✅ Approving pull request..."
 gh pr review --approve
 
-# 7. Merge PR and delete branch
+echo "🔀 Merging pull request..."
 gh pr merge --auto --squash --delete-branch
+
+echo "🎉 Done! PR approved and merged."
