@@ -26,8 +26,8 @@ gh pr create --base main --head $BRANCH_NAME \
   --title "$COMMIT_MSG" \
   --body "Automated PR created by auto-pr.sh for Solitaire Game"
 
-echo "✅ Approving pull request..."
-gh pr review --approve
+#echo "✅ Approving pull request..."
+#gh pr review --approve
 
 echo "🔀 Merging pull request..."
 gh pr merge --auto --squash --delete-branch
